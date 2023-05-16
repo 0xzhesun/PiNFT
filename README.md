@@ -1,3 +1,3 @@
 # PiNFT
 
-A Mini MachineFi project.
+Quick start guidance will be updated soon.

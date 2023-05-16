@@ -1,13 +1,13 @@
 {
   "name": "pi-nft",
   "version": "1.0.0",
-  "description": "",
+  "description": "A Mini MachineFi project.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
+  "author": "Zhe Sun",
   "license": "ISC",
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox": "^2.0.2",
@@ -17,5 +17,13 @@
     "@openzeppelin/contracts": "^4.8.3",
     "dotenv": "^16.0.3",
     "ethers": "^5.7.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/0xzhesun/PiNFT.git"
+  },
+  "bugs": {
+    "url": "https://github.com/0xzhesun/PiNFT/issues"
+  },
+  "homepage": "https://github.com/0xzhesun/PiNFT#readme"
 }
