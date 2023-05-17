@@ -31,9 +31,11 @@ region=
 ```
 For a more detailed setup process, refer to the boto3 [documentation](https://boto3.amazonaws.com/v1/documentation/api/latest/guide/quickstart.html#configuration).
 
-4. In `incokeMint.py`, make sure the "NFT_MINT_FUNCTION_NAME" matches the Lambda fuction you created (or will create). 
+4. In `invokeMint.py`, make sure the "NFT_MINT_FUNCTION_NAME" matches the Lambda fuction you created (or will create). 
 
 5. Start the demo by running `demo.py`:
 ```
 python demo.py
 ``` 
+
+Congrats for making this far! Now enjoy the PoC.

@@ -8,11 +8,13 @@ const provider = new ethers.providers.JsonRpcProvider("https://eth-sepolia.g.alc
 
 const contract = require("../artifacts/contracts/PiNFT.sol/PiNFT.json");
 
+//set up the owner wallet
 const privateKey = process.env.PRIVATE_KEY
 const owner_wallet = new ethers.Wallet(privateKey, provider)
 
-const privateKey2 = process.env.PRIVATE_KEY2
-const client_wallet = new ethers.Wallet(privateKey2)
+//set up the client wallet (end user account)
+const client_privateKey = process.env.CLIENT_PRIVATE_KEY
+const client_wallet = new ethers.Wallet(client_privateKey)
 
 const abi = contract.abi
 const contractAddress = process.env.CONTRACT_ADDRESS
@@ -20,7 +22,7 @@ const contractAddress = process.env.CONTRACT_ADDRESS
 const piNftContract = new ethers.Contract(contractAddress, abi, owner_wallet)
 
 const mintNFT = async () => {
-    const imageBuffer = fs.readFileSync('scripts/snorlax.jpeg') //replace with your own image
+    const imageBuffer = fs.readFileSync('scripts/snorlax.jpeg') //add your own image under the same folder and replace the path
     const imageBase64String = imageBuffer.toString('base64')
     const msgHash = ethers.utils.hashMessage(imageBase64String)
     const client_signature = await client_wallet.signMessage(imageBase64String)
