@@ -22,18 +22,21 @@ if __name__ == '__main__':
                 print("Private key:", private_key)
                 print("Public key: ", public_key)
                 print("Wallet address:    ", address)
+                print()
 
             else:
                 print("Wallet already generated.\nThe address is:", address)
-
+                print()
         elif choice == "2":
             filename = str(counter) + ".jpg"
             capture.capture_photo(filename)
             print("Photo saved as", filename)
+            print()
             counter += 1
 
         elif choice == "3":
             mint.nft_mint(address, filename, private_key)
+            print()
         elif choice == "4":
             print("Exiting...")
             break
