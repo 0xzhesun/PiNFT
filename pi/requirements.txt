@@ -1,0 +1,4 @@
+ecdsa
+pysha3
+boto3
+web3
